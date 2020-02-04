@@ -16,7 +16,7 @@
               <artifactId>maven-war-plugin</artifactId>
               <version>3.2.3</version>
               <configuration>
-                   <failOnMissingWebXml>false</failOnMissingWebXml>
+                  <webXml>${basedir}/WebContent/WEB-INF/web.xml</webXml>
               </configuration>
           </plugin>
       </plugins>
