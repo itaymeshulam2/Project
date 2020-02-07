@@ -1,16 +1,18 @@
 package com.example.projects;
 
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.*;
 
-public class TestAutomation {
+public class AutomationTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Itay\\Desktop\\selenimDrivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("http://localhost:8181/itay_meshulam/");
@@ -28,4 +30,5 @@ public class TestAutomation {
         assertThat(driver.findElement(By.cssSelector("li")).getText(), is("Mohd Ali"));
         driver.findElement(By.cssSelector("html")).click();
     }
+
 }
