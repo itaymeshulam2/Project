@@ -28,7 +28,6 @@ public class AutomationTest {
         driver.findElement(By.cssSelector("input:nth-child(2)")).click();
         driver.findElement(By.cssSelector("input:nth-child(4)")).click();
         assertThat(driver.findElement(By.cssSelector("li")).getText(), is("Mohd Ali"));
-        driver.findElement(By.cssSelector("html")).click();
     }
 
 }
